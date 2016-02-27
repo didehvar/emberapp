@@ -1,0 +1,38 @@
+<div class="jumbotron">
+  <h1 class="display-3">The login page</h1>
+  <p class="lead">
+    Ooo err
+  </p>
+</div>
+
+{{#if errorMessage}}
+  <div class="alert alert-danger" role="alert">
+    {{errorMessage}}
+  </div>
+{{/if}}
+
+<div class="row">
+  <div class="col-sm-6">
+    <form>
+      <fieldset class="form-group">
+        <label for="email">Email address</label>
+        {{input id="email" class="form-control" type="email" placeholder="Email" value=email}}
+      </fieldset>
+      <fieldset class="form-group">
+        <label for="password">Password</label>
+        {{input id="password" class="form-control" type="password" placeholder="Password" value=password}}
+      </fieldset>
+      <button type="submit" class="btn btn-primary" {{action 'authenticate'}}>
+        Login
+      </button>
+      <button type="submit" class="btn btn-warning" {{action 'register'}}>
+        Register
+      </button>
+    </form>
+  </div>
+  <div class="col-sm-6 text-xs-center">
+    <button class="btn btn-success" {{action 'authenticateGithub'}}>
+      {{fa-icon 'github'}} Login with GitHub
+    </button>
+  </div>
+</div>

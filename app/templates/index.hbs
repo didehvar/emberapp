@@ -1,0 +1,18 @@
+<div class="jumbotron">
+  <h1 class="display-3">The home page</h1>
+  <p class="lead">
+    This page demonstrates <span class="text-danger">nested</span> views.
+  </p>
+
+  <hr class="m-y-2">
+
+  {{#link-to 'index.list' class="btn btn-primary" tagName="button"}}
+    List
+  {{/link-to}}
+
+  {{#link-to 'index.paragraph' class="btn btn-danger" tagName="button"}}
+    Paragraph
+  {{/link-to}}
+</div>
+
+{{outlet}}
